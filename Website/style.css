@@ -1,0 +1,74 @@
+header {
+  position: fixed;
+  top: 0; /* Keeps the header at the top of the page */
+  left: 0; /* Ensures the header stays at the top of the page */
+  width: 100%; /* Makes the header span the full width of the page */
+  background-color: #19191a;
+  color: rgb(190, 190, 190);
+  transition: top 0.3s ease-in-out; /* Smooth slide effect */
+  z-index: 1000; /* Keeps header on top of other content */
+}
+
+body {
+    margin-top: 50px;
+    margin-left: 5%; 
+    margin-right: 9%;
+    padding: 70px 0 0; /* Adds padding to prevent content from being hidden behind the fixed header */
+    font-family: Arial, sans-serif; 
+    background-color: rgb(53, 53, 53);
+}
+
+/* The container holding the elements */
+main {
+    width: 100%;
+    background-color: black;
+    padding: 20px; /* Optional: Adds some padding around the content */
+}
+
+/* Clearfix: Prevents the main container from collapsing due to floated children */
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Float the image to the left */
+.section {
+  float: left;
+  width: 150px;        /* Set the width of your image */
+  height: auto;
+  margin-right: 20px;  /* Creates the gap between the image and the text */
+  margin-bottom: 10px; /* Optional: Prevents text from hugging the bottom of the image if it wraps */
+}
+
+/* The About Me text */
+.aside {
+  margin: 0;           /* Resets default margins so it aligns nicely with the top of the image */
+  color: white;        /* Matches your WhiteText class intent */
+}
+
+.WhiteText {
+    color: rgb(190, 190, 190);
+}
+
+.background picture {
+    position: fixed;
+    top: 0; /* Keeps the background at the top of the page */
+    left: 0; /* Ensures the background stays at the top of the page */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Ensures the image covers the entire background without distortion */
+    z-index: -1; /* Places the background behind all other content */
+}
+
+.centered-content {
+    display: flex; /* Turns the header into a flexbox layout */
+    flex-direction: column; /* Stacks the content vertically */
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically */
+    height: 10vh; 
+}
+
+.header-hidden {
+  top: -70px; /* match header's total height */
+}
